@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sgp 1`] = `
+Array [
+  Object {
+    "apiVersion": "vpcresources.k8s.aws/v1beta1",
+    "kind": "SecurityGroupPolicy",
+    "metadata": Object {
+      "name": "test",
+    },
+    "spec": Object {
+      "podSelector": Object {
+        "matchLabels": Object {
+          "app": "test",
+        },
+      },
+      "securityGroups": Object {
+        "groupIds": Array [
+          "sg-12345",
+        ],
+      },
+    },
+  },
+]
+`;
