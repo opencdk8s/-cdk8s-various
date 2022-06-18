@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sgp 1`] = `
+Array [
+  Object {
+    "apiVersion": "configuration.konghq.com/v1beta1",
+    "kind": "TCPIngress",
+    "metadata": Object {
+      "annotations": Object {
+        "kubernetes.io/ingress.class": "kong",
+      },
+      "name": "test",
+    },
+    "spec": Object {
+      "rules": Array [
+        Object {
+          "backend": Object {
+            "serviceName": "test",
+            "servicePort": 8080,
+          },
+          "port": 9000,
+        },
+      ],
+    },
+  },
+]
+`;

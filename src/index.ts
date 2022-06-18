@@ -6,6 +6,7 @@ export interface SecurityGroupPolicyOptions {
   readonly securityGroupIds?: string[];
 }
 
+
 export class SecurityGroupPolicy extends Construct {
   constructor(scope: Construct, name: string, opts: SecurityGroupPolicyOptions) {
     super(scope, `${name}-sgp`);
@@ -23,6 +24,40 @@ export class SecurityGroupPolicy extends Construct {
         securityGroups: {
           groupIds: opts.securityGroupIds,
         },
+      },
+    });
+  }
+}
+
+
+export interface KongTcpOptions {
+  readonly annotations?: Record<string, string>;
+  readonly rules?: KongTcpRule[];
+}
+
+export interface KongTcpRule {
+  readonly backend: KongTcpBackend;
+  readonly port: number;
+}
+
+export interface KongTcpBackend {
+  readonly serviceName: string;
+  readonly servicePort: number;
+}
+
+export class KongTcpIngress extends Construct {
+  constructor(scope: Construct, name: string, opts: KongTcpOptions) {
+    super(scope, name);
+
+    new ApiObject(this, 'ingress', {
+      apiVersion: 'configuration.konghq.com/v1beta1',
+      kind: 'TCPIngress',
+      metadata: {
+        name: name,
+        annotations: opts.annotations,
+      },
+      spec: {
+        rules: opts.rules,
       },
     });
   }
