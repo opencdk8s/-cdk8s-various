@@ -1,5 +1,24 @@
-import { ApiObject } from 'cdk8s';
+import { ApiObject, ApiObjectMetadata } from 'cdk8s';
 import { Construct } from 'constructs';
+
+export interface UntypedConfigMapOptions {
+  readonly metadata: ApiObjectMetadata;
+  readonly data: string;
+}
+
+export class UntypedConfigMap extends Construct {
+
+  constructor(scope: Construct, name: string, opts: UntypedConfigMapOptions) {
+    super(scope, `${name}-cm`);
+
+    new ApiObject(this, name, {
+      apiVersion: 'v1',
+      kind: 'ConfigMap',
+      metadata: opts.metadata,
+      data: opts.data,
+    });
+  }
+}
 
 export interface SecurityGroupPolicyOptions {
   readonly selector?: Record<string, string>;
@@ -62,3 +81,5 @@ export class KongTcpIngress extends Construct {
     });
   }
 }
+
+

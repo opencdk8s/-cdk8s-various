@@ -200,6 +200,105 @@ The tree node.
 ---
 
 
+### UntypedConfigMap <a name="UntypedConfigMap" id="cdk8s-various.UntypedConfigMap"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-various.UntypedConfigMap.Initializer"></a>
+
+```typescript
+import { UntypedConfigMap } from 'cdk8s-various'
+
+new UntypedConfigMap(scope: Construct, name: string, opts: UntypedConfigMapOptions)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-various.UntypedConfigMap.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-various.UntypedConfigMap.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-various.UntypedConfigMap.Initializer.parameter.opts">opts</a></code> | <code><a href="#cdk8s-various.UntypedConfigMapOptions">UntypedConfigMapOptions</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-various.UntypedConfigMap.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="cdk8s-various.UntypedConfigMap.Initializer.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `opts`<sup>Required</sup> <a name="opts" id="cdk8s-various.UntypedConfigMap.Initializer.parameter.opts"></a>
+
+- *Type:* <a href="#cdk8s-various.UntypedConfigMapOptions">UntypedConfigMapOptions</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-various.UntypedConfigMap.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="cdk8s-various.UntypedConfigMap.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-various.UntypedConfigMap.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk8s-various.UntypedConfigMap.isConstruct"></a>
+
+```typescript
+import { UntypedConfigMap } from 'cdk8s-various'
+
+UntypedConfigMap.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdk8s-various.UntypedConfigMap.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-various.UntypedConfigMap.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdk8s-various.UntypedConfigMap.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ## Structs <a name="Structs" id="Structs"></a>
 
 ### KongTcpBackend <a name="KongTcpBackend" id="cdk8s-various.KongTcpBackend"></a>
@@ -355,6 +454,45 @@ public readonly selector: {[ key: string ]: string};
 ```
 
 - *Type:* {[ key: string ]: string}
+
+---
+
+### UntypedConfigMapOptions <a name="UntypedConfigMapOptions" id="cdk8s-various.UntypedConfigMapOptions"></a>
+
+#### Initializer <a name="Initializer" id="cdk8s-various.UntypedConfigMapOptions.Initializer"></a>
+
+```typescript
+import { UntypedConfigMapOptions } from 'cdk8s-various'
+
+const untypedConfigMapOptions: UntypedConfigMapOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-various.UntypedConfigMapOptions.property.data">data</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-various.UntypedConfigMapOptions.property.metadata">metadata</a></code> | <code>cdk8s.ApiObjectMetadata</code> | *No description.* |
+
+---
+
+##### `data`<sup>Required</sup> <a name="data" id="cdk8s-various.UntypedConfigMapOptions.property.data"></a>
+
+```typescript
+public readonly data: string;
+```
+
+- *Type:* string
+
+---
+
+##### `metadata`<sup>Required</sup> <a name="metadata" id="cdk8s-various.UntypedConfigMapOptions.property.metadata"></a>
+
+```typescript
+public readonly metadata: ApiObjectMetadata;
+```
+
+- *Type:* cdk8s.ApiObjectMetadata
 
 ---
 

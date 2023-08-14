@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`untyped cm 1`] = `
+Array [
+  Object {
+    "apiVersion": "v1",
+    "data": "lalskdoasnd",
+    "kind": "ConfigMap",
+    "metadata": Object {
+      "name": "asd",
+    },
+  },
+]
+`;
