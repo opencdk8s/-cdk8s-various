@@ -1,3 +1,12 @@
+# cdk8s-various
+
+Holds many useful fully typed cdk8s objects..
+
+## Available objects:
+
+1. SecurityGroupPolicy
+2. Untyped ConfigMap
+
 # API Reference <a name="API Reference" id="api-reference"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

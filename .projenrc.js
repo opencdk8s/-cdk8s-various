@@ -15,7 +15,7 @@ const project = new cdk8s.ConstructLibraryCdk8s({
     moduleName: 'github.com/opencdk8s/cdk8s-various-go',
   },
 
-  depsUpgrade: false,
+  depsUpgrade: true,
   dependabot: false,
   pullRequestTemplate: false,
   codeCov: true,
