@@ -1,6 +1,6 @@
 # cdk8s-various
 
-Holds many useful fully typed cdk8s objects.
+Holds many useful fully typed cdk8s objects..
 
 ## Available objects:
 
